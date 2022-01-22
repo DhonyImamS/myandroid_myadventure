@@ -1,0 +1,160 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-22T07:34:43.641Z",
+    "end": "2022-01-22T07:34:56.134Z",
+    "duration": 12493,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b452943b-dd63-4309-935a-6e540b637286",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [
+        {
+          "title": "\"before all\" hook: beforeAll in \"{root}\"",
+          "fullTitle": "\"before all\" hook: beforeAll in \"{root}\"",
+          "timedOut": false,
+          "duration": 32,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "// do something before every test\nmochaGlobalSetup();\ndone();",
+          "err": {},
+          "uuid": "c4ce5f2f-aec0-4fab-89ff-7dbc440929a6",
+          "parentUUID": "b452943b-dd63-4309-935a-6e540b637286",
+          "isHook": true,
+          "skipped": false
+        }
+      ],
+      "afterHooks": [
+        {
+          "title": "\"after all\" hook: afterAll in \"{root}\"",
+          "fullTitle": "\"after all\" hook: afterAll in \"{root}\"",
+          "timedOut": false,
+          "duration": 0,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "mochaGlobalTeardown();\ndone();",
+          "err": {},
+          "uuid": "94f7ab57-afb3-4e74-a0b0-07c11c03c1f8",
+          "parentUUID": "b452943b-dd63-4309-935a-6e540b637286",
+          "isHook": true,
+          "skipped": false
+        }
+      ],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c93d60d0-58cb-4cff-ae88-a71e921f28c6",
+          "title": "Testing Login Page",
+          "fullFile": "/Users/dhonyimamsaputra/atlaswork/myandroid_myadventure/test/android/test_login_blank_email.js",
+          "file": "/test/android/test_login_blank_email.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Testing Login Page\"",
+              "fullTitle": "Testing Login Page \"before all\" hook in \"Testing Login Page\"",
+              "timedOut": false,
+              "duration": 9669,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await webdriverIO.remote(android_capabilites);",
+              "err": {},
+              "uuid": "4395cf40-831d-4b94-9d19-e4f3b04d05ff",
+              "parentUUID": "c93d60d0-58cb-4cff-ae88-a71e921f28c6",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Testing Login Page with Blank Email",
+              "fullTitle": "Testing Login Page Testing Login Page with Blank Email",
+              "timedOut": false,
+              "duration": 2780,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Launch Activity Main\nconst { capabilities: { appPackage, appActivity } } = android_capabilites;\nawait driver.startActivity(appPackage, appActivity);\n// click Button Login without Input Anything\nselector = 'new UiSelector().text(\"LOGIN\")';\nconst buttonLogin = await driver.$(`android=${selector}`);\nawait buttonLogin.click();\n// assert danger alert is showup\nselector = 'new UiSelector().text(\"Enter Valid Email\")';\nconst actualText = await driver.$(`android=${selector}`);\nexpect(await actualText.getText()).to.equal('Enter Valid Email');",
+              "err": {},
+              "uuid": "ce29bdbf-7530-401e-a8c4-9099ba63fc59",
+              "parentUUID": "c93d60d0-58cb-4cff-ae88-a71e921f28c6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ce29bdbf-7530-401e-a8c4-9099ba63fc59"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2780,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 60000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.4.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "android_automation_report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "./test/reports",
+        "reportFilename": "android_automation_report"
+      },
+      "version": "5.2.0"
+    }
+  }
+}
