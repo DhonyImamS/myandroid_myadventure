@@ -1,0 +1,19 @@
+{
+    "name": "myandroid_myadventure",
+    "version": "1.0.0",
+    "description": "Appium Android with WebDriverIO and Mocha as Runner",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha test/android/**/*.js --require ./test/hooks.js --timeout 60000 --reporter mochawesome ----reporter-options reportDir=./test/reports,reportFilename=android_automation_report"
+    },
+    "author": "DhonyImamSaputra",
+    "license": "ISC",
+    "devDependencies": {
+        "assert": "^2.0.0",
+        "chai": "^4.1.2",
+        "mocha": "^8.0.1",
+        "webdriverio": "^6.0.5",
+        "mochawesome": "^6.3.0",
+        "mochawesome-report-generator": "^5.2.0"
+    }
+}
