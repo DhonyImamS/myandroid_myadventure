@@ -4,7 +4,7 @@
     "description": "Appium Android with WebDriverIO and Mocha as Runner",
     "main": "index.js",
     "scripts": {
-        "test": "mocha test/android/**/*.js --require ./test/hooks.js --timeout 60000 --reporter mochawesome ----reporter-options reportDir=./test/reports,reportFilename=android_automation_report"
+        "test-android": "mocha test/android/**/*.js --require ./test/hooks.js --timeout 60000 --reporter mochawesome ----reporter-options reportDir=./test/reports,reportFilename=android_automation_report"
     },
     "author": "DhonyImamSaputra",
     "license": "ISC",
