@@ -1,7 +1,7 @@
 
 pipeline {
     agent {
-        label 'jenkins-slave2'
+        label 'local_server_android'
     }
     stages{
         stage('Install Dependencies'){
