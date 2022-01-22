@@ -27,7 +27,7 @@ pipeline {
                         allowMissing: false,
                         alwaysLinkToLastBuild: true,
                         keepAll: true,
-                        reportDir: 'reports',
+                        reportDir: 'test/reports',
                         reportFiles: 'android_automation_report.html',
                         reportName: 'Android Automation Report',
                         reportTitles: 'ANDROID TEST REPORT'
