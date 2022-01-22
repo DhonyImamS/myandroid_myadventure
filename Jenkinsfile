@@ -10,11 +10,11 @@ pipeline {
             }
         }
 
-        stage('Launch AVD Emulator'){
-            steps{
-                sh "$ANDROID_HOME/emulator/emulator -avd Mobile_Retailer_Apps"
-            }
-        }
+        // stage('Launch AVD Emulator'){
+        //     steps{
+        //         sh "$ANDROID_HOME/emulator/emulator -avd Mobile_Retailer_Apps"
+        //     }
+        // }
 
         stage('Running Test'){
             steps{
